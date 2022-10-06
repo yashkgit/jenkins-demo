@@ -8,6 +8,7 @@ RUN unzip mical.zip
 RUN rm -rf mical.zip &&\
     cp -rf mical-html/* . &&\
     rm -rf mical-html
-RUN touch /abcd 
+RUN cd /    
+CMD touch /abcd 
 EXPOSE 80
 CMD ["/usr/sbin/httpd" , "-D" , "FOREGROUND"]
