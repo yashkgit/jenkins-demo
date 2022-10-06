@@ -8,6 +8,6 @@ RUN unzip mical.zip
 RUN rm -rf mical.zip &&\
     cp -rf mical-html/* . &&\
     rm -rf mical-html
-    touch /abc 
+    echo "welcome yash" > /var/www/html/yash.txt
 EXPOSE 80
 CMD ["/usr/sbin/httpd" , "-D" , "FOREGROUND"]
